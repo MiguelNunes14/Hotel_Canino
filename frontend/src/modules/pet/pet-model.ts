@@ -28,6 +28,7 @@ const fields = {
   type: new EnumeratorField('type', label('type'), [
     { id: 'cat', label: enumeratorLabel('type', 'cat') },
     { id: 'dog', label: enumeratorLabel('type', 'dog') },
+    { id: 'bird', label: enumeratorLabel('type', 'bird') },
   ],{
     "required": true
   }),

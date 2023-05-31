@@ -532,7 +532,7 @@
             "name": "filter[type]",
             "schema": {
               "type": "string",
-              "enum": ["cat","dog"]
+              "enum": ["cat","dog","bird"]
             }
           },
           {
@@ -1010,7 +1010,7 @@
             "name": "filter[status]",
             "schema": {
               "type": "string",
-              "enum": ["booked","progress","canceled","completed"]
+              "enum": ["booked","cancelled","completed","progress"]
             }
           },
           {
@@ -1021,6 +1021,14 @@
               "items": {
                 "type": "number"
               }
+            }
+          },
+          {
+            "in": "query",
+            "name": "filter[approval]",
+            "schema": {
+              "type": "string",
+              "enum": ["pending","approved","denied"]
             }
           },      
           {
@@ -2702,7 +2710,7 @@
           },
           "type": {
             "type": "string",
-            "enum": ["cat","dog"]
+            "enum": ["cat","dog","bird"]
           },
           "breed": {
             "type": "string"
@@ -2731,7 +2739,7 @@
           },
           "type": {
             "type": "string",
-            "enum": ["cat","dog"]
+            "enum": ["cat","dog","bird"]
           },
           "breed": {
             "type": "string"
@@ -2771,7 +2779,7 @@
             "type": "string",
             "format": "date-time"
           },
-          "notes": {
+          "clientNotes": {
             "type": "string"
           },
           "employeeNotes": {
@@ -2785,7 +2793,7 @@
           },
           "status": {
             "type": "string",
-            "enum": ["booked","progress","canceled","completed"]
+            "enum": ["booked","cancelled","completed","progress"]
           },
           "cancellationNotes": {
             "type": "string"
@@ -2798,6 +2806,10 @@
             "items": {
               "$ref": "#/components/schemas/File"
             }
+          },
+          "approval": {
+            "type": "string",
+            "enum": ["pending","approved","denied"]
           }    
         }
       },
@@ -2820,7 +2832,7 @@
             "type": "string",
             "format": "date-time"
           },
-          "notes": {
+          "clientNotes": {
             "type": "string"
           },
           "employeeNotes": {
@@ -2834,7 +2846,7 @@
           },
           "status": {
             "type": "string",
-            "enum": ["booked","progress","canceled","completed"]
+            "enum": ["booked","cancelled","completed","progress"]
           },
           "cancellationNotes": {
             "type": "string"
@@ -2847,6 +2859,10 @@
             "items": {
               "$ref": "#/components/schemas/FileInput"
             }
+          },
+          "approval": {
+            "type": "string",
+            "enum": ["pending","approved","denied"]
           }    
         }
       },

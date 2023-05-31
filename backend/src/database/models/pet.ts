@@ -24,7 +24,8 @@ export default function (sequelize) {
           notEmpty: true,
           isIn: [[
             "cat",
-            "dog"
+            "dog",
+            "bird"
           ]],
         }
       },

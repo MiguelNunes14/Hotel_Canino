@@ -35,7 +35,7 @@ const fields = {
   departure: new DateTimeField('departure', label('departure'), {
     "required": true
   }),
-  notes: new StringField('notes', label('notes'), {
+  clientNotes: new StringField('clientNotes', label('clientNotes'), {
     "max": 20000
   }),
   employeeNotes: new StringField('employeeNotes', label('employeeNotes'), {
@@ -44,9 +44,9 @@ const fields = {
   photos: new ImagesField('photos', label('photos'), Storage.values.bookingPhotos, {}),
   status: new EnumeratorField('status', label('status'), [
     { id: 'booked', label: enumeratorLabel('status', 'booked') },
-    { id: 'progress', label: enumeratorLabel('status', 'progress') },
-    { id: 'canceled', label: enumeratorLabel('status', 'canceled') },
+    { id: 'cancelled', label: enumeratorLabel('status', 'cancelled') },
     { id: 'completed', label: enumeratorLabel('status', 'completed') },
+    { id: 'progress', label: enumeratorLabel('status', 'progress') },
   ],{
     "required": true
   }),
@@ -57,6 +57,13 @@ const fields = {
     "scale": 2
   }),
   receipt: new FilesField('receipt', label('receipt'), Storage.values.bookingReceipt, {}),
+  approval: new EnumeratorField('approval', label('approval'), [
+    { id: 'pending', label: enumeratorLabel('approval', 'pending') },
+    { id: 'approved', label: enumeratorLabel('approval', 'approved') },
+    { id: 'denied', label: enumeratorLabel('approval', 'denied') },
+  ],{
+    "required": true
+  }),
   createdAt: new DateTimeField(
     'createdAt',
     label('createdAt'),

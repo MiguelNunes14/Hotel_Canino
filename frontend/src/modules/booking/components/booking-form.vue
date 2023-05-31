@@ -93,18 +93,18 @@
       </el-form-item>
 
       <el-form-item
-        :label="fields.notes.label"
-        :prop="fields.notes.name"
-        :required="fields.notes.required"
+        :label="fields.clientNotes.label"
+        :prop="fields.clientNotes.name"
+        :required="fields.clientNotes.required"
       >
         <el-col :lg="11" :md="16" :sm="24">
-          <el-input :rows="4" type="textarea" v-model="model[fields.notes.name]" :placeholder="fields.notes.placeholder" />
+          <el-input :rows="4" type="textarea" v-model="model[fields.clientNotes.name]" :placeholder="fields.clientNotes.placeholder" />
 
           <div
-            v-if="fields.notes.hint"
+            v-if="fields.clientNotes.hint"
             class="app-form-hint"
           >
-            {{ fields.notes.hint }}
+            {{ fields.clientNotes.hint }}
           </div>
         </el-col>
       </el-form-item>
@@ -228,6 +228,31 @@
         </el-col>
       </el-form-item>
 
+      <el-form-item
+        :label="fields.approval.label"
+        :prop="fields.approval.name"
+        :required="fields.approval.required"
+      >
+        <el-col :lg="11" :md="16" :sm="24">
+          <el-select v-model="model[fields.approval.name]" :placeholder="fields.approval.placeholder || ''">
+            <el-option :value="undefined">--</el-option>
+            <el-option
+              :key="option.id"
+              :label="option.label"
+              :value="option.id"
+              v-for="option in fields.approval.options"
+            ></el-option>
+          </el-select>
+
+          <div
+            v-if="fields.approval.hint"
+            class="app-form-hint"
+          >
+            {{ fields.approval.hint }}
+          </div>
+        </el-col>
+      </el-form-item>
+
       <el-form-item>
         <div class="form-buttons">
           <el-button
@@ -271,13 +296,14 @@ const formSchema = new FormSchema([
   fields.pet,
   fields.arrival,
   fields.departure,
-  fields.notes,
+  fields.clientNotes,
   fields.employeeNotes,
   fields.photos,
   fields.status,
   fields.cancellationNotes,
   fields.fee,
   fields.receipt,
+  fields.approval,
 ]);
 
 import Vue from 'vue';

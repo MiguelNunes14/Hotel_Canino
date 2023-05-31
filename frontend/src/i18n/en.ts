@@ -72,6 +72,7 @@ const en = {
           'type': {
             'cat': 'Cat',
             'dog': 'Dog',
+            'bird': 'Bird',
           },
           'size': {
             'small': 'Small',
@@ -131,7 +132,7 @@ const en = {
           'arrival': 'Arrival',
           'departureRange': 'Departure',
           'departure': 'Departure',
-          'notes': 'Notes',
+          'clientNotes': 'ClientNotes',
           'employeeNotes': 'EmployeeNotes',
           'photos': 'Photos',
           'status': 'Status',
@@ -139,6 +140,7 @@ const en = {
           'feeRange': 'Fee',
           'fee': 'Fee',
           'receipt': 'Receipt',
+          'approval': 'Approval',
           createdAt: 'Created at',
           updatedAt: 'Updated at',
           createdAtRange: 'Created at',
@@ -146,9 +148,14 @@ const en = {
         enumerators: {
           'status': {
             'booked': 'Booked',
-            'progress': 'Progress',
-            'canceled': 'Canceled',
+            'cancelled': 'Cancelled',
             'completed': 'Completed',
+            'progress': 'Progress',
+          },
+          'approval': {
+            'pending': 'Pending',
+            'approved': 'Approved',
+            'denied': 'Denied',
           },
         },
         placeholders: {

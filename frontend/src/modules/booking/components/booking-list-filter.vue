@@ -66,6 +66,20 @@
             <app-number-range-input v-model="model[fields.feeRange.name]"/>
           </el-form-item>
         </el-col>
+
+        <el-col :lg="12" :md="16" :sm="24">
+          <el-form-item :label="fields.approval.label" :prop="fields.approval.name">
+            <el-select placeholder v-model="model[fields.approval.name]">
+              <el-option :value="undefined">--</el-option>
+              <el-option
+                :key="option.id"
+                :label="option.label"
+                :value="option.id"
+                v-for="option in fields.approval.options"
+              ></el-option>
+            </el-select>
+          </el-form-item>
+        </el-col>
       </el-row>
 
       <div class="filter-buttons">
@@ -104,6 +118,7 @@ const filterSchema = new FilterSchema([
   fields.departureRange,
   fields.status,
   fields.feeRange,
+  fields.approval,
 ]);
 
 import Vue from 'vue';

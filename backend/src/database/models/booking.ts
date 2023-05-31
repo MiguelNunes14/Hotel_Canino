@@ -17,7 +17,7 @@ export default function (sequelize) {
         type: DataTypes.DATE,
         allowNull: false,
       },
-      notes: {
+      clientNotes: {
         type: DataTypes.TEXT,
         validate: {
           len: [0, 20000],
@@ -36,9 +36,9 @@ export default function (sequelize) {
           notEmpty: true,
           isIn: [[
             "booked",
-            "progress",
-            "canceled",
-            "completed"
+            "cancelled",
+            "completed",
+            "progress"
           ]],
         }
       },
@@ -52,6 +52,18 @@ export default function (sequelize) {
         type: DataTypes.DECIMAL(24, 2),
         validate: {
 
+        }
+      },
+      approval: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        validate: {
+          notEmpty: true,
+          isIn: [[
+            "pending",
+            "approved",
+            "denied"
+          ]],
         }
       },
       importHash: {

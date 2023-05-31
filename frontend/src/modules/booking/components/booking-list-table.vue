@@ -75,6 +75,14 @@
       </el-table-column>
 
       <el-table-column
+        :label="fields.approval.label"
+        :prop="fields.approval.name"
+        sortable="custom"
+      >
+        <template slot-scope="scope">{{ presenter(scope.row, 'approval') }}</template>
+      </el-table-column>
+
+      <el-table-column
         :fixed="isMobile ? undefined : 'right'"
         align="center"
         width="180"

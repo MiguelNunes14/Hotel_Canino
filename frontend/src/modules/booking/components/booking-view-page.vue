@@ -56,7 +56,7 @@
 
         <app-view-item-text :label="fields.departure.label" :value="presenter(record, 'departure')"></app-view-item-text>
 
-        <app-view-item-text :label="fields.notes.label" :value="presenter(record, 'notes')"></app-view-item-text>
+        <app-view-item-text :label="fields.clientNotes.label" :value="presenter(record, 'clientNotes')"></app-view-item-text>
 
         <app-view-item-text :label="fields.employeeNotes.label" :value="presenter(record, 'employeeNotes')"></app-view-item-text>
 
@@ -69,6 +69,8 @@
         <app-view-item-text :label="fields.fee.label" :value="presenter(record, 'fee')"></app-view-item-text>
 
         <app-view-item-file :label="fields.receipt.label" :value="presenter(record, 'receipt')"></app-view-item-file>
+
+        <app-view-item-text :label="fields.approval.label" :value="presenter(record, 'approval')"></app-view-item-text>
       </el-form>
     </div>
   </div>

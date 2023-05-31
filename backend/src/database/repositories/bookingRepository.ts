@@ -29,11 +29,12 @@ class BookingRepository {
         ...lodash.pick(data, [
           'arrival',
           'departure',
-          'notes',
+          'clientNotes',
           'employeeNotes',
           'status',
           'cancellationNotes',
-          'fee',          
+          'fee',
+          'approval',          
           'importHash',
         ]),
         ownerId: data.owner || null,
@@ -111,11 +112,12 @@ class BookingRepository {
         ...lodash.pick(data, [
           'arrival',
           'departure',
-          'notes',
+          'clientNotes',
           'employeeNotes',
           'status',
           'cancellationNotes',
-          'fee',          
+          'fee',
+          'approval',          
           'importHash',
         ]),
         ownerId: data.owner || null,
@@ -401,6 +403,12 @@ class BookingRepository {
             },
           });
         }
+      }
+
+      if (filter.approval) {
+        whereAnd.push({
+          approval: filter.approval,
+        });
       }
 
       if (filter.createdAtRange) {
