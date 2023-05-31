@@ -31,52 +31,52 @@ const ptBR = {
   },
 
   entities: {
-    pet: {
-        name: 'Pet',
-        label: 'Pets',
-        menu: 'Pets',
-        exporterFileName: 'Pet_exportados',
+    Animal: {
+        name: 'Animal',
+        label: 'Animais',
+        menu: 'Animais',
+        exporterFileName: 'Animal_exportados',
         list: {
-          menu: 'Pets',
-          title: 'Pets',
+          menu: 'Animais',
+          title: 'Animais',
         },
         create: {
-          success: 'Pet salvo com sucesso',
+          success: 'Animal salvo com sucesso',
         },
         update: {
-          success: 'Pet salvo com sucesso',
+          success: 'Animal salvo com sucesso',
         },
         destroy: {
-          success: 'Pet deletado com sucesso',
+          success: 'Animal deletado com sucesso',
         },
         destroyAll: {
-          success: 'Pet(s) deletado com sucesso',
+          success: 'Animal(s) deletado com sucesso',
         },
         edit: {
-          title: 'Editar Pet',
+          title: 'Editar Animal',
         },
         fields: {
           id: 'Id',
-          'owner': 'Owner',
-          'name': 'Name',
-          'type': 'Type',
-          'breed': 'Breed',
-          'size': 'Size',
-          'bookings': 'Bookings',
+          'owner': 'Dono',
+          'name': 'Nome',
+          'type': 'Tipo',
+          'breed': 'Raça',
+          'size': 'Tamanho',
+          'bookings': 'Reservas',
           createdAt: 'Criado em',
           updatedAt: 'Atualizado em',
           createdAtRange: 'Criado em',
         },
         enumerators: {
           'type': {
-            'cat': 'Cat',
-            'dog': 'Dog',
-            'bird': 'Bird',
+            'cat': 'Gato',
+            'dog': 'Cão',
+            'bird': 'Ave',
           },
           'size': {
-            'small': 'Small',
-            'medium': 'Medium',
-            'large': 'Large',
+            'small': 'Pequeno',
+            'medium': 'Médio',
+            'large': 'Grande',
           },
         },
         placeholders: {
@@ -86,75 +86,75 @@ const ptBR = {
 
         },
         new: {
-          title: 'Novo Pet',
+          title: 'Novo Animal',
         },
         view: {
-          title: 'Visualizar Pet',
+          title: 'Visualizar Animal',
         },
         importer: {
-          title: 'Importar Pets',
-          fileName: 'pet_template_importacao',
+          title: 'Importar Animais',
+          fileName: 'Animal_template_importacao',
           hint:
             'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
         },
       },
 
-    booking: {
-        name: 'Booking',
-        label: 'Bookings',
-        menu: 'Bookings',
-        exporterFileName: 'Booking_exportados',
+    Reserva: {
+        name: 'Reserva',
+        label: 'Reservas',
+        menu: 'Reservas',
+        exporterFileName: 'Reserva_exportados',
         list: {
-          menu: 'Bookings',
-          title: 'Bookings',
+          menu: 'Reservas',
+          title: 'Reservas',
         },
         create: {
-          success: 'Booking salvo com sucesso',
+          success: 'Reserva salvo com sucesso',
         },
         update: {
-          success: 'Booking salvo com sucesso',
+          success: 'Reserva salvo com sucesso',
         },
         destroy: {
-          success: 'Booking deletado com sucesso',
+          success: 'Reserva deletado com sucesso',
         },
         destroyAll: {
-          success: 'Booking(s) deletado com sucesso',
+          success: 'Reserva(s) deletado com sucesso',
         },
         edit: {
-          title: 'Editar Booking',
+          title: 'Editar Reserva',
         },
         fields: {
           id: 'Id',
           'owner': 'Owner',
-          'pet': 'Pet',
-          'arrivalRange': 'Arrival',
-          'arrival': 'Arrival',
-          'departureRange': 'Departure',
-          'departure': 'Departure',
-          'clientNotes': 'ClientNotes',
-          'employeeNotes': 'EmployeeNotes',
-          'photos': 'Photos',
-          'status': 'Status',
-          'cancellationNotes': 'CancellationNotes',
-          'feeRange': 'Fee',
-          'fee': 'Fee',
-          'receipt': 'Receipt',
-          'approval': 'Approval',
+          'pet': 'Animal',
+          'arrivalRange': 'Chegada',
+          'arrival': 'Chegada',
+          'departureRange': 'Saída',
+          'departure': 'Saída',
+          'clientNotes': 'Notas do Cliente',
+          'employeeNotes': 'Notas do Empregado',
+          'photos': 'Fotos',
+          'status': 'Estado',
+          'cancellationNotes': 'Notas do Cancelamento',
+          'feeRange': 'Preço',
+          'fee': 'Preço',
+          'receipt': 'Receita',
+          'approval': 'Aprovação',
           createdAt: 'Criado em',
           updatedAt: 'Atualizado em',
           createdAtRange: 'Criado em',
         },
         enumerators: {
           'status': {
-            'booked': 'Booked',
-            'cancelled': 'Cancelled',
-            'completed': 'Completed',
-            'progress': 'Progress',
+            'booked': 'Reservado',
+            'cancelled': 'Cancelado',
+            'completed': 'Completo',
+            'progress': 'Em Progresso',
           },
           'approval': {
-            'pending': 'Pending',
-            'approved': 'Approved',
-            'denied': 'Denied',
+            'pending': 'Em espera',
+            'approved': 'Aprovado',
+            'denied': 'Negado',
           },
         },
         placeholders: {
@@ -164,14 +164,14 @@ const ptBR = {
 
         },
         new: {
-          title: 'Novo Booking',
+          title: 'Nova Reserva',
         },
         view: {
-          title: 'Visualizar Booking',
+          title: 'Visualizar Reserva',
         },
         importer: {
-          title: 'Importar Bookings',
-          fileName: 'booking_template_importacao',
+          title: 'Importar Reservas',
+          fileName: 'Reserva_template_importacao',
           hint:
             'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
         },

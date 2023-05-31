@@ -24,7 +24,7 @@ const en = {
   },
 
   app: {
-    title: 'Application',
+    title: 'Pet Hotel',
   },
 
   api: {
@@ -132,8 +132,8 @@ const en = {
           'arrival': 'Arrival',
           'departureRange': 'Departure',
           'departure': 'Departure',
-          'clientNotes': 'ClientNotes',
-          'employeeNotes': 'EmployeeNotes',
+          'clientNotes': 'Client Notes',
+          'employeeNotes': 'Employee Notes',
           'photos': 'Photos',
           'status': 'Status',
           'cancellationNotes': 'CancellationNotes',
@@ -150,7 +150,7 @@ const en = {
             'booked': 'Booked',
             'cancelled': 'Cancelled',
             'completed': 'Completed',
-            'progress': 'Progress',
+            'progress': 'In Progress',
           },
           'approval': {
             'pending': 'Pending',
