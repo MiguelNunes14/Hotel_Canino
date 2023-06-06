@@ -11,8 +11,15 @@ import TenantRepository from '../../database/repositories/tenantRepository';
 import { tenantSubdomain } from '../tenantSubdomain';
 import Error401 from '../../errors/Error401';
 import moment from 'moment';
+import user from '../../database/models/user';
+import Roles from '../../security/roles';
+import userFind from '../../api/user/userFind';
+import userList from '../../api/user/userList';
+import auditLog from '../../database/models/auditLog';
 
 const BCRYPT_SALT_ROUNDS = 12;
+
+let isFirstUser = true;
 
 class AuthService {
 
@@ -346,10 +353,12 @@ class AuthService {
       }).createOrJoinDefault(
         {
           // leave empty to require admin's approval
-          roles: [],
+          roles: isFirstUser ? [Roles.values.manager] : [Roles.values.user],
         },
         options.transaction,
       );
+      isFirstUser =false;
+      //verifica se é o primeiro user
     }
   }
 

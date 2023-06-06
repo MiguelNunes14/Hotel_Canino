@@ -10,7 +10,7 @@
       <el-table-column
         :label="fields.timestamp.label"
         :prop="fields.timestamp.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">{{
           presenter(scope.row, 'timestamp')
@@ -19,7 +19,7 @@
       <el-table-column
         :label="fields.createdByEmail.label"
         :prop="fields.createdByEmail.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">{{
           presenter(scope.row, 'createdByEmail')
@@ -28,7 +28,7 @@
       <el-table-column
         :label="fields.entityName.label"
         :prop="fields.entityName.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">{{
           presenter(scope.row, 'entityName')
@@ -37,7 +37,7 @@
       <el-table-column
         :label="fields.action.label"
         :prop="fields.action.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">{{
           presenter(scope.row, 'action')
@@ -46,7 +46,7 @@
       <el-table-column
         :label="fields.entityId.label"
         :prop="fields.entityId.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">{{
           presenter(scope.row, 'entityId')

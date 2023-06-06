@@ -29,7 +29,7 @@
       <el-table-column
         :label="fields.email.label"
         :prop="fields.email.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">
           {{ presenter(scope.row, 'email') }}
@@ -39,7 +39,7 @@
       <el-table-column
         :label="fields.fullName.label"
         :prop="fields.fullName.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">
           {{ presenter(scope.row, 'fullName') }}
@@ -67,7 +67,7 @@
       <el-table-column
         :label="fields.status.label"
         :prop="fields.status.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">
           <el-tag

@@ -11,7 +11,7 @@ class Permissions {
     return {
       tenantEdit: {
         id: 'tenantEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -20,7 +20,7 @@ class Permissions {
       },
       tenantDestroy: {
         id: 'tenantDestroy',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -29,7 +29,7 @@ class Permissions {
       },
       planEdit: {
         id: 'planEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -38,7 +38,7 @@ class Permissions {
       },
       planRead: {
         id: 'planRead',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -47,7 +47,7 @@ class Permissions {
       },
       userEdit: {
         id: 'userEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -56,7 +56,7 @@ class Permissions {
       },
       userDestroy: {
         id: 'userDestroy',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -65,7 +65,7 @@ class Permissions {
       },
       userCreate: {
         id: 'userCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -74,7 +74,7 @@ class Permissions {
       },
       userImport: {
         id: 'userImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -83,7 +83,7 @@ class Permissions {
       },
       userRead: {
         id: 'userRead',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -92,7 +92,7 @@ class Permissions {
       },
       userAutocomplete: {
         id: 'userAutocomplete',
-        allowedRoles: [roles.admin, roles.custom],
+        allowedRoles: [roles.manager, roles.user],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -101,7 +101,7 @@ class Permissions {
       },
       auditLogRead: {
         id: 'auditLogRead',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -110,7 +110,7 @@ class Permissions {
       },
       settingsEdit: {
         id: 'settingsEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [
           plans.free,
           plans.growth,
@@ -123,12 +123,12 @@ class Permissions {
       },
       petImport: {
         id: 'petImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       petCreate: {
         id: 'petCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -136,7 +136,7 @@ class Permissions {
       },
       petEdit: {
         id: 'petEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -144,7 +144,7 @@ class Permissions {
       },
       petDestroy: {
         id: 'petDestroy',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
 
@@ -152,23 +152,23 @@ class Permissions {
       },
       petRead: {
         id: 'petRead',
-        allowedRoles: [roles.admin, roles.custom],
+        allowedRoles: [roles.manager, roles.user],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       petAutocomplete: {
         id: 'petAutocomplete',
-        allowedRoles: [roles.admin, roles.custom],
+        allowedRoles: [roles.manager, roles.user],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
 
       bookingImport: {
         id: 'bookingImport',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       bookingCreate: {
         id: 'bookingCreate',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
           storage.bookingPhotos,
@@ -177,7 +177,7 @@ class Permissions {
       },
       bookingEdit: {
         id: 'bookingEdit',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
           storage.bookingPhotos,
@@ -186,7 +186,7 @@ class Permissions {
       },
       bookingDestroy: {
         id: 'bookingDestroy',
-        allowedRoles: [roles.admin],
+        allowedRoles: [roles.manager],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
         allowedStorage: [
           storage.bookingPhotos,
@@ -195,12 +195,12 @@ class Permissions {
       },
       bookingRead: {
         id: 'bookingRead',
-        allowedRoles: [roles.admin, roles.custom],
+        allowedRoles: [roles.manager, roles.user],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
       bookingAutocomplete: {
         id: 'bookingAutocomplete',
-        allowedRoles: [roles.admin, roles.custom],
+        allowedRoles: [roles.manager, roles.user],
         allowedPlans: [plans.free, plans.growth, plans.enterprise],
       },
     };

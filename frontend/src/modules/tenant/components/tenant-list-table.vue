@@ -11,7 +11,7 @@
       <el-table-column
         :label="fields.name.label"
         :prop="fields.name.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">
           {{ presenter(scope.row, 'name') }}

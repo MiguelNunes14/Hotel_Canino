@@ -235,12 +235,12 @@ const en = {
   },
 
   roles: {
-    admin: {
-      label: 'Admin',
+    manager: {
+      label: 'Manager',
       description: 'Full access to all resources',
     },
-    custom: {
-      label: 'Custom Role',
+    user: {
+      label: 'Client',
       description: 'Custom role access',
     },
   },

@@ -98,7 +98,7 @@
         v-if="hasPermissionToPet || petLocked"
         :disabled="petLocked"
       >
-        <i class="el-icon-fa-chevron-right"></i>
+        <i class="el-icon-fa-paw"></i>
         <span slot="title">
           <app-i18n code="entities.pet.menu"></app-i18n>
         </span>
@@ -111,7 +111,7 @@
         v-if="hasPermissionToBooking || bookingLocked"
         :disabled="bookingLocked"
       >
-        <i class="el-icon-fa-chevron-right"></i>
+        <i class="el-icon-fa-calendar"></i>
         <span slot="title">
           <app-i18n code="entities.booking.menu"></app-i18n>
         </span>

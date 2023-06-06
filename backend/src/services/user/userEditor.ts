@@ -93,7 +93,7 @@ export default class UserEditor {
    * Checks if the user is removing the responsable for the plan
    */
   async _isRemovingPlanUser() {
-    if (this._roles.includes(Roles.values.admin)) {
+    if (this._roles.includes(Roles.values.manager)) {
       return false;
     }
 
@@ -114,10 +114,10 @@ export default class UserEditor {
   }
 
   /**
-   * Checks if the user is removing it's own admin role
+   * Checks if the user is removing it's own manager role
    */
-  async _isRemovingOwnAdminRole() {
-    if (this._roles.includes(Roles.values.admin)) {
+  async _isRemovingOwnmanagerRole() {
+    if (this._roles.includes(Roles.values.manager)) {
       return false;
     }
 
@@ -134,7 +134,7 @@ export default class UserEditor {
         this.options.currentTenant.id,
     );
 
-    return tenantUser.roles.includes(Roles.values.admin);
+    return tenantUser.roles.includes(Roles.values.manager);
   }
 
   async _validate() {
@@ -166,7 +166,7 @@ export default class UserEditor {
       );
     }
 
-    if (await this._isRemovingOwnAdminRole()) {
+    if (await this._isRemovingOwnmanagerRole()) {
       throw new Error400(
         this.options.language,
         'user.errors.revokingOwnPermission',

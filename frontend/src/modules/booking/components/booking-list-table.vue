@@ -38,7 +38,7 @@
       <el-table-column
         :label="fields.arrival.label"
         :prop="fields.arrival.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">{{ presenter(scope.row, 'arrival') }}</template>
       </el-table-column>
@@ -46,7 +46,7 @@
       <el-table-column
         :label="fields.departure.label"
         :prop="fields.departure.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">{{ presenter(scope.row, 'departure') }}</template>
       </el-table-column>
@@ -54,7 +54,7 @@
       <el-table-column
         :label="fields.status.label"
         :prop="fields.status.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">{{ presenter(scope.row, 'status') }}</template>
       </el-table-column>
@@ -62,7 +62,7 @@
       <el-table-column
         :label="fields.fee.label"
         :prop="fields.fee.name"
-        sortable="custom"
+        sortable="user"
         align="right"
       >
         <template slot-scope="scope">{{ presenter(scope.row, 'fee') }}</template>
@@ -77,7 +77,7 @@
       <el-table-column
         :label="fields.approval.label"
         :prop="fields.approval.name"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">{{ presenter(scope.row, 'approval') }}</template>
       </el-table-column>

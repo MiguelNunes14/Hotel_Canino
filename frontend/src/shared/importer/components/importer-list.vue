@@ -15,7 +15,7 @@
       <el-table-column
         :label="i18n('importer.line')"
         prop="_line"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">{{
           scope.row._line
@@ -26,7 +26,7 @@
         :key="field.name"
         :label="field.label"
         :prop="field.name"
-        sortable="custom"
+        sortable="user"
         v-for="field of fields"
       >
         <template slot-scope="scope">
@@ -37,7 +37,7 @@
       <el-table-column
         :label="i18n('importer.status')"
         prop="_status"
-        sortable="custom"
+        sortable="user"
       >
         <template slot-scope="scope">
           <app-importer-status-row

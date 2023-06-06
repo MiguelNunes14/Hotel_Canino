@@ -232,12 +232,12 @@ const ptBR = {
   },
 
   roles: {
-    admin: {
-      label: 'Administrador',
+    manager: {
+      label: 'Manager',
       description: 'Acesso completo a todos os recursos',
     },
-    custom: {
-      label: 'Perfil Customizado',
+    user: {
+      label: 'Cliente',
       description: 'Acesso customizado',
     },
   },

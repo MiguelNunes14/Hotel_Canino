@@ -4,8 +4,8 @@ import _values from 'lodash/values';
 class Roles {
   static get values() {
     return {
-      admin: 'admin',
-      custom: 'custom',
+      manager: 'manager',
+      user: 'user',
     };
   }
 

@@ -21,7 +21,7 @@ export default class TenantService {
   /**
    * Creates the default tenant or joins the default with
    * roles passed.
-   * If default roles are empty, the admin will have to asign the roles
+   * If default roles are empty, the manager will have to asign the roles
    * to new users.
    */
   async createOrJoinDefault({ roles }, transaction) {
@@ -71,7 +71,7 @@ export default class TenantService {
     await TenantUserRepository.create(
       record,
       this.options.currentUser,
-      [Roles.values.admin],
+      [Roles.values.manager],
       {
         ...this.options,
         transaction,
@@ -194,7 +194,7 @@ export default class TenantService {
       await TenantUserRepository.create(
         record,
         this.options.currentUser,
-        [Roles.values.admin],
+        record ? [Roles.values.manager] : [Roles.values.user],
         {
           ...this.options,
           transaction,

@@ -291,12 +291,12 @@ const es = {
     },
   },
   roles: {
-    admin: {
-      label: 'Administración',
+    manager: {
+      label: 'Manager',
       description: 'Acceso total a todos los recursos.',
     },
-    custom: {
-      label: 'Rol personalizado',
+    user: {
+      label: 'Usuário',
       description: 'Acceso personalizado a recursos',
     },
   },
